@@ -1,48 +1,44 @@
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class Apple implements Part {
-	private int x;
-	private int y;
+
+public class Apple {
+
+	private int xCoor;
+	private int yCoor;
 	private int width;
 	private int height;
-
-	public Apple(int x, int y, int tileSize) {
-		this.x = x;
-		this.y = y;
+	
+	public Apple (int xCoor, int yCoor, int tileSize) {
+		this.xCoor = xCoor;
+		this.yCoor = yCoor;
 		width = tileSize;
 		height = tileSize;
 	}
-
-	@Override
-	public void tick() {
-
+	
+	public void tick(){
+	
 	}
-
-	@Override
+	
 	public void draw(Graphics g) {
 		g.setColor(Color.RED);
-		g.fillRect(x * width, y * height, width, height);
+		g.fillRect(xCoor * width, yCoor * height, width, height);
 	}
 
-	@Override
-	public int getX() {
-		return this.x;
+	public int getxCoor() {
+		return xCoor;
 	}
 
-	@Override
-	public void setX(int x) {
-		this.x = x;
+	public void setxCoor(int xCoor) {
+		this.xCoor = xCoor;
 	}
 
-	@Override
-	public int getY() {
-		return this.y;
+	public int getyCoor() {
+		return yCoor;
 	}
 
-	@Override
-	public void setY(int y) {
-		this.y = y;
+	public void setyCoor(int yCoor) {
+		this.yCoor = yCoor;
 	}
 
 }
