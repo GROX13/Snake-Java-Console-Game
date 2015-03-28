@@ -86,8 +86,7 @@ public class Screen extends JPanel implements Runnable {
 		}
 
 		for (int i = 0; i < snake.size(); i++) {
-			if (xCoor == snake.get(i).getX()
-					&& yCoor == snake.get(i).getY()) {
+			if (xCoor == snake.get(i).getX() && yCoor == snake.get(i).getY()) {
 				if (i != snake.size() - 1) {
 					stop();
 				}

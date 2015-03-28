@@ -1,3 +1,4 @@
+
 import java.awt.Color;
 import java.awt.Graphics;
 
@@ -15,14 +16,9 @@ public class Apple implements Part {
 	}
 
 	@Override
-	public void tick() {
-
-	}
-
-	@Override
-	public void draw(Graphics g) {
-		g.setColor(Color.RED);
-		g.fillRect(x * width, y * height, width, height);
+	public void draw(Graphics graphics) {
+		graphics.setColor(Color.RED);
+		graphics.fillRect(x * width, y * height, width, height);
 	}
 
 	@Override
@@ -43,6 +39,11 @@ public class Apple implements Part {
 	@Override
 	public void setY(int y) {
 		this.y = y;
+	}
+
+	@Override
+	public void tick() {
+
 	}
 
 }
